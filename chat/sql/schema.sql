@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS chat
+    CHARACTER SET utf8mb4
+    COLLATE utf8mb4_unicode_ci;
+
+USE chat;
+
+CREATE TABLE IF NOT EXISTS usuarios (
+    usuario VARCHAR(20)  NOT NULL PRIMARY KEY,
+    nome    VARCHAR(255) NOT NULL,
+    senha   VARCHAR(6)   NOT NULL,
+    token   VARCHAR(50)  NOT NULL UNIQUE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
